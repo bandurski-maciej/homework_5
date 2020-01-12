@@ -19,8 +19,8 @@ public class InfoShareAcademyServlet extends HttpServlet {
     resp.setContentType("text/html;charset=UTF-8");
     PrintWriter writer = resp.getWriter();
     writer.println("<!DOCTYPE html><html><body>");
-    writer.println("<p> Jan Kowalski</p>");
-    writer.println("<p> jjdd8-zespół</p>");
+    writer.println("<p>Maciej Bandurski</p>");
+    writer.println("<p> jjdd8-highFive</p>");
     writer.println("<p>" + LocalDateTime.now() + "</p>");
     writer.println("</body></html>");
 
