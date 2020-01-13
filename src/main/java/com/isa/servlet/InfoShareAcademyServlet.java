@@ -30,9 +30,9 @@ public class InfoShareAcademyServlet extends HttpServlet {
   protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
     Enumeration<String> parameterNames = req.getParameterNames();
+    resp.setContentType("text/html;charset=UTF-8");
 
     PrintWriter writer = resp.getWriter();
-    resp.setContentType("text/html;charset=UTF-8");
     writer.println("<!DOCTYPE html><html><body>");
     writer.println("<ul>");
 
@@ -46,9 +46,8 @@ public class InfoShareAcademyServlet extends HttpServlet {
       for (int i = 0; i < paramValues.length; i++) {
         String paramValue = paramValues[i];
 
-        if (paramValues.length <= 1) {writer.println(paramValue);}
-        else if (i == 0) {
-          writer.println("<ul>");
+        if (paramValues.length <= 1) { writer.println("<ul><li>" + paramValue + "</li></ul>");}
+        else if (i == 0) { writer.println("<ul><li>" + paramValue + "</li>");
         } else if (i == paramValues.length - 1) { writer.println("<li>" + paramValue + "</li></ul>");}
         else {writer.println("<li>" + paramValue + "</li>");}
       }
